@@ -1,0 +1,7 @@
+.btn:hover {
+    border: 2px solid lightgray;
+}
+.validation-error {
+    color: red;
+    margin-left: 172px;
+}
