@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+.form-border {
+    border: 1px solid black;
+}
+.form-align {
+   margin: 0 20%;
+   font-size: 14px;
+}
+.mandatory {
+    color: red;
+}
+.btn {
+    width: 200px;
+    border-radius: 0%;
+    background-color: lightgray;
+    font-size: 15px;
+    font-weight: 500;
+    align-items: center;
+}
+.form-control {
+    width: 80%;
+}
+.heading {
+    font-size: 25px;
+    font-weight: 600;
+}
+@media (min-width: 750px) {
+    .col-form-label {
+        text-align: end;
+    }    
+    .header_content {
+        display: flex;
+        justify-content:space-between;
+    }
+    .customer_btn {
+        display: flex;
+        justify-content: end;
+    }
+}
+@media(max-width: 750px) {
+    .header_content {
+        display: flex;
+       flex-wrap: wrap-reverse;
+    }
+}
+.ngx-select__choices {
+    width: 80% !important;
+}
+
+

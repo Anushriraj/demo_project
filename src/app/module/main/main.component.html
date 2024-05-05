@@ -1,0 +1,37 @@
+<div class="main_content mx-auto">
+    <div class="customer_btn mb-3">
+        <button type="button" class="btn btn-lg" (click)="onClickAddCustomer()"><i class="fa-solid fa-plus"></i> Add Customer</button>
+    </div>
+    <div class="header_content">
+        <div class="heading">List of Pins</div>
+        <div>
+            <button type="button " class="btn btn-lg mb-3" (click)="onClickAddPin()"><i class="fa-solid fa-plus"></i> Add Pin</button>
+        </div>
+    </div>
+   <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Image</th>
+            <th scope="col">Collaboratory</th>
+            <th scope="col">Privacy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pin of pinList">
+            <td>{{pin.title}}</td>
+            <td><img class="image_align" [src]="pin.url"></td>
+            <td>{{pin.collaboratory}}</td>
+            <td>{{pin.privacy}}</td>
+        </tr>
+    </tbody>
+   </table>
+
+   <div class="mx-auto mb-5" *ngIf="showCustomerForm">
+    <app-create-customer (collaboratory)="getCollaboratoryList($event)"></app-create-customer>
+   </div>
+
+   <div class="mx-auto" *ngIf="showPinForm">
+    <app-create-pin [collaboratoryLists]="collaboratoryList"></app-create-pin>
+   </div>
+</div>
