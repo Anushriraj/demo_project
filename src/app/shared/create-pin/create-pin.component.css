@@ -1,0 +1,25 @@
+.image_upload {
+    border: 1px solid lightgray;
+    height: 40px;
+    border-radius: 3%;
+    color: #B5B3B3;
+    text-align: center;
+}
+.image_text {
+    color: black;
+}
+.validation-error {
+    color: red;
+    margin-left: 220px;
+}
+.file_content {
+    padding-top: 20px;
+}
+.btn:hover {
+    border: 2px solid lightgray;
+}
+@media (max-width: 450px) {
+    .image_upload {
+        height: 100px !important;
+    } 
+}
